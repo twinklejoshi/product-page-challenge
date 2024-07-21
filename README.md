@@ -93,7 +93,7 @@ docker compose exec -it api-orders bash
 python -m pytest tests/ # from within the container
 ```
 
-NOTE: Make sure the api.orders and api.products container are running.
+NOTE: Make sure the api.orders container is running.
 
 You can also install all the dependencies locally and run the tests using the same command that you run inside the docker container from the bakcend directory. Would recommend setting up a python env under the .venv directory name for this
 
