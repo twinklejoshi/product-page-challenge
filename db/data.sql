@@ -93,6 +93,16 @@ CREATE TABLE `Product` (
 LOCK TABLES `Product` WRITE;
 /*!40000 ALTER TABLE `Product` DISABLE KEYS */;
 INSERT INTO `Product` VALUES (1,'Hat','t','Active'),(2,'Shoes','t','Active'),(3,'Pants','t','Active'),(4,'Shirt','t','InActive'),(5,'Coat','t','InActive');
+UPDATE `Product` 
+SET ProductPhotoURL = CASE 
+  WHEN ProductID = 1 THEN 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg'
+  WHEN ProductID = 2 THEN 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg'
+  WHEN ProductID = 3 THEN 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg'
+  WHEN ProductID = 4 THEN 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg'
+  WHEN ProductID = 5 THEN 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-05.jpg'
+END
+WHERE id IN (1, 2, 3, 4, 5);
+
 /*!40000 ALTER TABLE `Product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
