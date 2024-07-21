@@ -101,7 +101,7 @@ SET ProductPhotoURL = CASE
   WHEN ProductID = 4 THEN 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg'
   WHEN ProductID = 5 THEN 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-05.jpg'
 END
-WHERE id IN (1, 2, 3, 4, 5);
+WHERE ProductID IN (1, 2, 3, 4, 5);
 
 /*!40000 ALTER TABLE `Product` ENABLE KEYS */;
 UNLOCK TABLES;
